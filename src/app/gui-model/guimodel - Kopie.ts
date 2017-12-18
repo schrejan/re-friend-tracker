@@ -1,4 +1,4 @@
-﻿export class GuiModel {
+export class GuiModel {
 
     /* HINWEIS: Texte sind in der Datei ../example-translation-service.ts definiert.
     Erscheinen Texte in {}, so kann die Übersetzung in example-translation-service.ts definiert werden
@@ -9,7 +9,7 @@
 
     private _guiModel = {
         "application": {
-            "title": "Schrejan Friend Tracker",
+            "title": "Requirements Engineering Friend Tracker",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -29,21 +29,6 @@
                             "width": 1,
                             "required": true
                         },
-						{
-                            "id": "group",
-                            "type": "autocomplete",
-                            "name": "Group",
-							"data": ["Study", "Family", "School" ],
-							"form": "GroupForm",
-                            "width": 1,
-                         },
-			{
-				"id": "nickname",
-				"type": "text",
-				"name": "Nickname",
-				"width": 2,
-				"required": true,
-			},
                         {
                             "id":   "location",
                             "type": "autocomplete",
@@ -104,33 +89,7 @@
                             "name": "Ok"
                         }
                     ]
-                },
-                {
-                    "id": "GroupForm",
-                    "title": "Group",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "GroupName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
                 }
-
             ],
             "pageList": [
                 {
@@ -150,13 +109,6 @@
                             "icon": "fa-cubes",
                             "color": "yellow",
                             "page": "locationspage",
-                        },
-			{
-                            "type": "button",
-                            "name": "Groups",
-                            "icon": "fa-weixin",
-                            "color": "wisteria",
-                            "page": "groupspage",
                         },
                     ]
                 },
@@ -184,7 +136,7 @@
                             "form": {
                                 "form": "FriendForm"
                             }
-			 },
+                        },
                     ]
                 },
                 {
@@ -210,33 +162,6 @@
                             "data": [ { name: "Adelboden" }, { name: "Winterthur" }, { name: "Zinal"}, { name: "Zürich"} ],
                             "form": {
                                 "form": "LocationForm"
-                            }
-                        },
-                    ]
-                },
-		{
-                    "id": "groupspage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewGroup",
-                            "icon": "fa-weixin",
-                            "color": "green",
-                            "form": {
-                                "form": "GroupForm"
-                            }
-                        },
-						{
-                            "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "wisteria",
-                            "search": true,
-                            "data": [ { name: "Study" }, { name: "Family" }, { name: "School"} ],
-                            "form": {
-                                "form": "GroupForm"
                             }
                         },
                     ]
